@@ -1,0 +1,28 @@
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: larger;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn :hover {
+    transform: scale(1.1);
+    background-color: lightsalmon;
+}
+
+.btn-success {
+    background-color: lightgreen;
+}
+.btn-success:hover {
+    background-color: green;
+    color: white;
+}
+.btn-danger {
+    background-color: lightcoral;
+}
+.btn-danger:hover {
+    background-color: red;
+    color: white;
+}

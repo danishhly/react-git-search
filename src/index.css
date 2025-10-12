@@ -1,0 +1,34 @@
+.counter-container {
+  text-align: center;
+  margin-top: 50px;
+}
+.counter-heading {
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #109ece;
+}
+.count{
+  font-size: 80px;
+  margin: 20px 0;
+  color: #14cca7;
+  font-family: 'Courier New', Courier, monospace;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.button{
+  padding: 15px 30px;
+  font-size: 20px;
+  border: redundant;
+  background-color: #109ece;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #06344d;
+}
