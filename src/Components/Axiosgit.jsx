@@ -1,5 +1,6 @@
 import React, { useState }from "react";
 import axios from 'axios';
+import styles from './axiosgit.module.css';
 
 function Axiosgit() {
   const [username, setUsername] = useState("");
@@ -31,25 +32,26 @@ function Axiosgit() {
   
     
   return (
-    <div style = {{ maxWidth: "400px", margin: "auto", textAlign:"center"}}>
+    <div className = {styles.container}>
         <h2>GitHub User Search</h2>
 
         <input 
+        className = {styles.input}
         type = "text"
         placeholder='Enter GitHub username'
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         />
 
-        <button onClick = {handleSearch}>Search</button>
+        <button className={styles.button} onClick = {handleSearch}>Search</button>
 
         {loading && <p>Loading...</p>}
 
-        {error && <p style ={{ color: "red"}}>{error}</p>}
+        {error && <p className={styles.error}>{error}</p>}
 
         {user && !loading && (
-            <div style={{ marginTop: "20px", textAlign: "left" }}>
-                <img src={user.avatar_url} alt={user.login} style={{ width: "100px", borderRadius: "50%" }} />
+            <div className={styles.userCard}>
+                <img className = {styles.avatar}src={user.avatar_url} alt={user.login} style={{ width: "100px", borderRadius: "50%" }} />
                 <h3>{user.name ? user.name : user.login}</h3>
                 <p>Followers: {user.followers}</p>
                 <p>Following: {user.following}</p>
